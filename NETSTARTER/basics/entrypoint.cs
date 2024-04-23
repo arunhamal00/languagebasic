@@ -51,16 +51,21 @@ bishnu.dob = new DateTime(1990, 12, 12);
 // Inheritance/Polymorphism -- OOP
 
 
-ParallelAsync parallelAsync = new();
-parallelAsync.ProcessNumbers();
+// ParallelAsync parallelAsync = new();
+// parallelAsync.ProcessNumbers();
 
-await parallelAsync.IgniteStove();
-await parallelAsync.PutKeatleyOnWithWater();
-await parallelAsync.GrindMasala();
-
-
+// await parallelAsync.IgniteStove();
+// await parallelAsync.PutKeatleyOnWithWater();
+// await parallelAsync.GrindMasala();
 
 
+BasicDbContext Db=new ();
+var teacher = Db.Teachers.Tolist();
+
+foreach(var teacher in teachers)
+{
+    Console.WriteLine($"Name: {teacher.name}, dob:({teacher.Dob})");
+}
 
 
 
